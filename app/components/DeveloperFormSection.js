@@ -270,7 +270,7 @@ const DeveloperSubmission = () => {
             <span className="text-blue-700 mr-2 mt-0.5 text-base">🔒</span>
             <div>
               <p className="mb-1">
-                All module submissions are routed through MorphicBrain's
+                All module submissions are routed through MorphicBrain
                 security layers.
               </p>
               <p className="mb-3">

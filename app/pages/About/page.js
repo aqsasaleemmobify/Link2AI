@@ -24,8 +24,8 @@ const About = () => {
             in isolation.
           </p>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-            Whether you're building a chatbot, a vision model, or a finance
-            tool, Link2VA lets your agent plug into a broader AI economy —
+            Whether youre building a chatbot, a vision model, or a finance
+            tool, Link2VA lets your agent plug into a broader AI economy 
             safely and intelligently.
           </p>
 
