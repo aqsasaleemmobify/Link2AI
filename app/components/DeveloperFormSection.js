@@ -13,8 +13,9 @@ import {
   Grid,
   Box,
 } from "@mui/material";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { useRouter } from "next/navigation";
+
 
 const industries = [
   "Healthcare",
@@ -44,7 +45,7 @@ const DeveloperSubmission = () => {
   });
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
-
+    const router = useRouter();
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
     if (type === "checkbox") {
@@ -79,9 +80,22 @@ const DeveloperSubmission = () => {
   return (
     <>
       <Paper elevation={3} className="p-8 max-w-4xl mx-auto my-10">
+      <KeyboardBackspaceIcon
+  onClick={() => router.push("/")}
+  sx={{
+    cursor: "pointer",
+    color: "#1e41af",
+    fontSize: 30, // optional: make it larger
+  }}
+  />
         <Typography variant="h4" className="text-blue-800 text-center mb-6">
-          Submit Your AI Module (Form A-01)
+          Submit Your AI Module
         </Typography>
+        <p className="text-gray-700 my-4 text-center"> 
+          Before your module can connect with others, we need a few details.
+          Every submission goes through our MorphicBrain intelligence loop for
+          validation, compatibility, and risk screening.{" "}
+        </p>
         <form
           onSubmit={handleSubmit}
           encType="multipart/form-data"
@@ -218,7 +232,7 @@ const DeveloperSubmission = () => {
             <Typography variant="subtitle1" className="mb-1 font-medium">
               Upload Documentation
             </Typography>
-            <div className="border border-gray-300 rounded px-4 py-2">
+            <div className="border-dashed border border-gray-400 rounded px-4 py-6">
               <input
                 type="file"
                 name="documentation"
@@ -270,8 +284,8 @@ const DeveloperSubmission = () => {
             <span className="text-blue-700 mr-2 mt-0.5 text-base">🔒</span>
             <div>
               <p className="mb-1">
-                All module submissions are routed through MorphicBrain
-                security layers.
+                All module submissions are routed through MorphicBrain security
+                layers.
               </p>
               <p className="mb-3">
                 Before being reviewed by <strong>Link2VA Admin</strong>, your
